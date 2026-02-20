@@ -6,3 +6,15 @@ buttons.forEach(button => {
         display.value += button.textContent;
     });
 });
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const value = button.textContent;
+
+        if (value === "C") {
+            display.value = "";
+        } else {
+            display.value += value;
+        }
+    });
+});
